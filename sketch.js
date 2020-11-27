@@ -28,7 +28,7 @@ function setup() {
     world = engine.world;
 
     // Bg sound
-    // bgs.play();
+    bgs.play();
 
     // adding plinkos using arrays
     for (var j = 1; j <= 5; j++) {
@@ -102,12 +102,12 @@ function draw() {
     stroke(0);
     text("Chances Left : " + count, 400, 50);
     // displaying score labels
-    text("100",50,725);
-    text("100",130,725);
-    text("200",210,725);
-    text("200",290,725);
-    text("300",370,725);
-    text("300",450,725);
+    text("100", 50, 725);
+    text("100", 130, 725);
+    text("200", 210, 725);
+    text("200", 290, 725);
+    text("300", 370, 725);
+    text("300", 450, 725);
     // gameOver State
     if (count == 0) {
         gameState = "over";
