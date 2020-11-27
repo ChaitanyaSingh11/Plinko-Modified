@@ -1,0 +1,10 @@
+html,
+body {
+  margin-left: 250px;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  border:4px dashed blue
+}
