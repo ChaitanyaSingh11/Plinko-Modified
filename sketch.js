@@ -70,9 +70,9 @@ function draw() {
         particle.show();
         if (particle.plinko.position.y > 725) {
             if (particle.plinko.position.x < 160)
-                score += 100;
+                score += 500;
             else if (particle.plinko.position.x > 180 & particle.plinko.position.x < 330)
-                score += 200;
+                score += 100;
             else if (particle.plinko.position.x > 340 & particle.plinko.position.x < 490)
                 score += 200;
             World.remove(world, particle.plinko);
@@ -102,12 +102,12 @@ function draw() {
     stroke(0);
     text("Chances Left : " + count, 400, 50);
     // displaying score labels
-    text("100", 50, 725);
-    text("100", 130, 725);
-    text("200", 210, 725);
-    text("200", 290, 725);
-    text("300", 370, 725);
-    text("300", 450, 725);
+    text("500", 50, 725);
+    text("500", 130, 725);
+    text("100", 210, 725);
+    text("100", 290, 725);
+    text("200", 370, 725);
+    text("200", 450, 725);
     // gameOver State
     if (count == 0) {
         gameState = "over";
@@ -134,7 +134,7 @@ function show(array) {
 // creating particles on releasing the mouse
 function mouseReleased() {
     if (gameState == "drop") {
-        if (mouseY <= 50 & (count > 0) & !particle) {
+        if (mouseY <= 450 & (count > 0) & !particle) {
             particle = new Particle(mouseX, mouseY);
             Body.setStatic(particle.plinko, false);
             count--;
